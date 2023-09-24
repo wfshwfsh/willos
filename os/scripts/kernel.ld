@@ -22,6 +22,17 @@ SECTIONS
 		. = ALIGN(4096);
 	}
 	
+	.stab :
+	{
+		*(.stab)
+		. = ALIGN(4096);
+	}
+	.stabstr :
+	{
+		*(.stabstr)
+	 	. = ALIGN(4096);
+	}
+	
 	/DISCARD/ :
 	{
 		*(.eh_frame .note.GNU-stack)
