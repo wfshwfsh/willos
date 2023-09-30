@@ -1,28 +1,42 @@
 
 #include "types.h"
+#include "console.h"
+#include "common.h"
+
+extern uint16_t *video_memory;
 
 int kern_entry()
 {
-	uint8_t *input = (uint8_t *)0xB8000;
-	uint8_t color = (0 << 4) | (15 & 0x0F);
+	console_clear();	
+	console_write("Hello World Test\n");
 
-	*input++ = 'H'; *input++ = color;
-	*input++ = 'e'; *input++ = color;
-	*input++ = 'l'; *input++ = color;
-	*input++ = 'l'; *input++ = color;
-	*input++ = 'o'; *input++ = color;
-	*input++ = ','; *input++ = color;
-	*input++ = ' '; *input++ = color;
-	*input++ = 'O'; *input++ = color;
-	*input++ = 'S'; *input++ = color;
-	*input++ = ' '; *input++ = color;
-	*input++ = 'K'; *input++ = color;
-	*input++ = 'e'; *input++ = color;
-	*input++ = 'r'; *input++ = color;
-	*input++ = 'n'; *input++ = color;
-	*input++ = 'e'; *input++ = color;
-	*input++ = 'l'; *input++ = color;
-	*input++ = '!'; *input++ = color;
+
+#if 0
+	for(int i=0;i<100;i++)
+	{
+		console_put_dec_color(i, rc_black, rc_white);
+		console_write("\n");
+	}
+	console_put_dec_color(101, rc_black, rc_white);
+	console_write("Hello World Test\n");
+#endif
+#if 0
+	console_put_dec_color(432105678, rc_black, rc_white);
+	console_write("\n");
+	
+	console_put_dec_color(50607080, rc_black, rc_white);
+	console_write("\n");
+#endif
+
+	
+	for(int i=0;i<100;i++)
+	{
+		console_put_dec_color(i, rc_black, rc_white);
+		if(i%16 != 0)
+			console_write("\t");
+		else
+			console_write("\n");
+	}
 
 	return 0;
 }
