@@ -55,7 +55,8 @@ typedef
 struct elf_t {
   elf_symbol_t *symtab;
   uint32_t      symtabsz;
-  const char   *strtab;
+  
+  const char   *strtab;   //elf_section_header[idx].addr
   uint32_t      strtabsz;
 } elf_t;
 

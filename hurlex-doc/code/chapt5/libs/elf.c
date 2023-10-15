@@ -26,6 +26,11 @@ elf_t elf_from_multiboot(multiboot_t *mb)
 	int i;
 	elf_t elf;
 	elf_section_header_t *sh = (elf_section_header_t*)mb->addr;
+	printk("mb->flags = %x\n", mb->flags);
+	printk("mb->num = %u\n", mb->num);
+	printk("mb->size = %u\n", mb->size);
+	printk("mb->addr = 0x%x\n", mb->addr);
+	printk("mb->shndx = %u\n", mb->shndx);
 
 	uint32_t shstrtab = sh[mb->shndx].addr;
 	for (i = 0; i < mb->num; i++) {

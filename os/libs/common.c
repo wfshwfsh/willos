@@ -22,12 +22,3 @@ uint16_t inw(uint16_t port)
 	return data;
 }
 
-void memcpy(void *dst, void *src, int32_t sz)
-{
-	uint8_t *_src = (uint8_t *)src; 
-	uint8_t *_dst = (uint8_t *)dst; 
-  
-	int i;
-	for(i=0;i<sz;i++)
-		_dst[i] = _src[i];
-}

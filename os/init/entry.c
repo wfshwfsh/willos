@@ -2,14 +2,14 @@
 #include "types.h"
 #include "console.h"
 #include "common.h"
-
-extern uint16_t *video_memory;
+#include "debug.h"
 
 int kern_entry()
 {
-	console_clear();	
+	console_clear();
+	init_debug();
 	console_write("Hello World Test\n");
-
+	panic("test");
 
 #if 0
 	for(int i=0;i<100;i++)
@@ -28,7 +28,7 @@ int kern_entry()
 	console_write("\n");
 #endif
 
-	
+#if 0	
 	for(int i=0;i<100;i++)
 	{
 		console_put_dec_color(i, rc_black, rc_white);
@@ -37,6 +37,7 @@ int kern_entry()
 		else
 			console_write("\n");
 	}
+#endif
 
 	return 0;
 }

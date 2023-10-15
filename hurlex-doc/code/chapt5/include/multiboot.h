@@ -58,8 +58,8 @@ struct multiboot_t {
 	 */
 	uint32_t num;
 	uint32_t size;
-	uint32_t addr;
-	uint32_t shndx;
+	uint32_t addr; //elf_section_header_t array
+	uint32_t shndx;//elf_section_header_t array's idx
 
 	/**
 	 * 以下两项指出保存由BIOS提供的内存分布的缓冲区的地址和长度

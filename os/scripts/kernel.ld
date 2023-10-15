@@ -33,8 +33,5 @@ SECTIONS
 	 	. = ALIGN(4096);
 	}
 	
-	/DISCARD/ :
-	{
-		*(.eh_frame .note.GNU-stack)
-	}
-}
+	/DISCARD/ : { *(.comment) *(.eh_frame) }
+}	

@@ -13,6 +13,5 @@ uint8_t inb(uint16_t port);
 // read word to register
 uint16_t inw(uint16_t port);
 
-void memcpy(void *dst, void *src, int32_t sz);
 
 #endif // INCLUDE_COMMON_H_
