@@ -1,0 +1,550 @@
+00000000000i[     ] Bochs x86 Emulator 2.3.7
+00000000000i[     ]   Build from CVS snapshot, on June 3, 2008
+00000000000i[     ] System configuration
+00000000000i[     ]   processors: 1 (cores=1, HT threads=1)
+00000000000i[     ]   A20 line support: yes
+00000000000i[     ]   APIC support: no
+00000000000i[     ] CPU configuration
+00000000000i[     ]   level: 5
+00000000000i[     ]   SMP support: no
+00000000000i[     ]   FPU support: yes
+00000000000i[     ]   MMX support: yes
+00000000000i[     ]   SSE support: no
+00000000000i[     ]   CLFLUSH support: no
+00000000000i[     ]   VME support: yes
+00000000000i[     ]   3dnow! support: no
+00000000000i[     ]   PAE support: no
+00000000000i[     ]   PGE support: no
+00000000000i[     ]   PSE support: yes
+00000000000i[     ]   x86-64 support: no
+00000000000i[     ]   SEP support: no
+00000000000i[     ]   MWAIT support: no
+00000000000i[     ]   XSAVE support: no
+00000000000i[     ]   AES support: no
+00000000000i[     ] Optimization configuration
+00000000000i[     ]   Guest2HostTLB support: no
+00000000000i[     ]   RepeatSpeedups support: no
+00000000000i[     ]   Icache support: no
+00000000000i[     ]   Trace cache support: no
+00000000000i[     ]   Fast function calls: no
+00000000000i[     ] Devices configuration
+00000000000i[     ]   ACPI support: no
+00000000000i[     ]   NE2000 support: no
+00000000000i[     ]   PCI support: no
+00000000000i[     ]   SB16 support: no
+00000000000i[     ]   USB support: no
+00000000000i[     ]   VGA extension support: vbe 
+00000000000i[MEM0 ] allocated memory at 0xf66e4008. after alignment, vector=0xf66e5000
+00000000000i[MEM0 ] 16.00MB
+00000000000i[MEM0 ] rom at 0xfffe0000/131072 ('./bochs/BIOS-bochs-latest')
+00000000000i[MEM0 ] rom at 0xc0000/39424 ('./bochs/vgabios.bin')
+00000000000i[CMOS ] Using local time for initial clock
+00000000000i[CMOS ] Setting initial clock to: Wed Jan 17 08:18:33 2024 (time0=1705508313)
+00000000000i[DMA  ] channel 4 used by cascade
+00000000000i[DMA  ] channel 2 used by Floppy Drive
+00000000000i[FDD  ] fd0: './floppy.img' ro=0, h=2,t=80,spt=18
+00000000000i[MEM0 ] Register memory access handlers: 0x000a0000 - 0x000bffff
+00000000000i[XGUI ] test_alloc_colors: 16 colors available out of 16 colors tried
+00000000000i[XGUI ] font 8 wide x 16 high, display depth = 24
+00000000000i[VGA  ] interval=300000
+00000000000i[MEM0 ] Register memory access handlers: 0xe0000000 - 0xe07fffff
+00000000000i[VGA  ] VBE Bochs Display Extension Enabled
+00000000000i[     ] init_mem of 'harddrv' plugin device by virtual method
+00000000000i[     ] init_mem of 'keyboard' plugin device by virtual method
+00000000000i[     ] init_mem of 'serial' plugin device by virtual method
+00000000000i[     ] init_mem of 'parallel' plugin device by virtual method
+00000000000i[     ] init_mem of 'extfpuirq' plugin device by virtual method
+00000000000i[     ] init_mem of 'speaker' plugin device by virtual method
+00000000000i[     ] init_dev of 'harddrv' plugin device by virtual method
+00000000000i[HD   ] Using boot sequence floppy, none, none
+00000000000i[HD   ] Floppy boot signature check is enabled
+00000000000i[     ] init_dev of 'keyboard' plugin device by virtual method
+00000000000i[KBD  ] will paste characters every 1000 keyboard ticks
+00000000000i[     ] init_dev of 'serial' plugin device by virtual method
+00000000000i[SER  ] com1 at 0x03f8 irq 4
+00000000000i[     ] init_dev of 'parallel' plugin device by virtual method
+00000000000i[PAR  ] parallel port 1 at 0x0378 irq 7
+00000000000i[     ] init_dev of 'extfpuirq' plugin device by virtual method
+00000000000i[     ] init_dev of 'speaker' plugin device by virtual method
+00000000000i[SPEAK] Failed to open /dev/console: Resource temporarily unavailable
+00000000000i[SPEAK] Deactivating beep on console
+00000000000i[     ] register state of 'harddrv' plugin device by virtual method
+00000000000i[     ] register state of 'keyboard' plugin device by virtual method
+00000000000i[     ] register state of 'serial' plugin device by virtual method
+00000000000i[     ] register state of 'parallel' plugin device by virtual method
+00000000000i[     ] register state of 'extfpuirq' plugin device by virtual method
+00000000000i[     ] register state of 'speaker' plugin device by virtual method
+00000000000i[SYS  ] bx_pc_system_c::Reset(HARDWARE) called
+00000000000i[CPU  ] cpu hardware reset
+00000000000i[     ] reset of 'harddrv' plugin device by virtual method
+00000000000i[     ] reset of 'keyboard' plugin device by virtual method
+00000000000i[     ] reset of 'serial' plugin device by virtual method
+00000000000i[     ] reset of 'parallel' plugin device by virtual method
+00000000000i[     ] reset of 'extfpuirq' plugin device by virtual method
+00000000000i[     ] reset of 'speaker' plugin device by virtual method
+00000000000i[XGUI ] [x] Mouse off
+00000000000i[GDBST] addr fff0 len 8
+00000000000i[GDBST] addr fff0 len 7
+00000000000i[GDBST] setting breakpoint at 10123d
+00000003445i[BIOS ] $Revision: 1.194 $ $Date: 2007/12/23 19:46:27 $
+00000319271i[KBD  ] reset-disable command received
+00000338015i[BIOS ] Starting rombios32
+00000338711i[BIOS ] ram_size=0x00f00000
+00000339225i[BIOS ] Found 1 cpu(s)
+00000563723i[VBIOS] VGABios $Id: vgabios.c,v 1.66 2006/07/10 07:47:51 vruppert Exp $
+00000563794i[VGA  ] VBE known Display Interface b0c0
+00000563826i[VGA  ] VBE known Display Interface b0c4
+00000566751i[VBIOS] VBE Bios $Id: vbe.c,v 1.58 2006/08/19 09:39:43 vruppert Exp $
+00001081654i[BIOS ] Booting from 0000:7c00
+00001200000i[XGUI ] charmap update. Font Height is 16
+00010748989i[BIOS ] int13_harddisk: function 41, unmapped device for ELDL=80
+00010753766i[BIOS ] int13_harddisk: function 08, unmapped device for ELDL=80
+00010758425i[BIOS ] *** int 15h function AX=00c0, BX=0000 not yet supported!
+00055024459i[GDBST] found breakpoint at 10123d
+00055024459i[GDBST] stopped with ac1
+00055024459i[GDBST] reg 8 set to 10123d
+00055024459i[GDBST] reg 41 set to ffffffff
+00055024459i[GDBST] Removing breakpoint at 10123d
+00055024459i[GDBST] addr 100e19 len 1
+00055024459i[GDBST] addr 100e19 len 1
+00055024459i[GDBST] addr 100e19 len 1
+00055024459i[GDBST] addr 100e19 len 1
+00055024459i[GDBST] addr 100e19 len a
+00055024459i[GDBST] addr 100e19 len 1
+00055024459i[GDBST] addr 100e1a len 1
+00055024459i[GDBST] addr 100e1b len 5
+00055024459i[GDBST] addr 100e1b len 5
+00055024459i[GDBST] addr 100e1a len 1
+00055024459i[GDBST] addr 100e1b len 1
+00055024459i[GDBST] addr 100e1c len 1
+00055024459i[GDBST] addr 100e1d len 1
+00055024459i[GDBST] addr 100e1e len 1
+00055024459i[GDBST] addr 100e1f len 1
+00055024459i[GDBST] addr 100e1f len 1
+00055024459i[GDBST] addr 100e19 len 1
+00055024459i[GDBST] addr 10123d len 1
+00055024459i[GDBST] addr 10123e len 4
+00055024459i[GDBST] addr 101242 len 1
+00055024459i[GDBST] addr 101243 len 4
+00055024459i[GDBST] addr 101247 len 1
+00055024459i[GDBST] addr 101248 len 4
+00055024459i[GDBST] addr 10124c len 1
+00055024459i[GDBST] addr 10124d len 4
+00055024459i[GDBST] addr 101251 len 1
+00055024459i[GDBST] addr 101252 len 1
+00055024459i[GDBST] addr 101253 len 1
+00055024459i[GDBST] addr 101254 len 1
+00055024459i[GDBST] addr 101255 len 4
+00055024459i[GDBST] addr 101259 len 1
+00055024459i[GDBST] addr 10125a len 1
+00055024459i[GDBST] addr 10125b len 1
+00055024459i[GDBST] addr 10125c len 1
+00055024459i[GDBST] addr 10125d len 1
+00055024459i[GDBST] addr 10125e len 4
+00055024459i[GDBST] addr 101262 len 1
+00055024459i[GDBST] addr 101263 len 1
+00055024459i[GDBST] addr 101264 len 1
+00055024459i[GDBST] addr 101265 len 1
+00055024459i[GDBST] addr 101266 len 1
+00055024459i[GDBST] addr 101267 len 1
+00055024459i[GDBST] addr 101268 len 1
+00055024459i[GDBST] addr 101269 len 4
+00055024459i[GDBST] addr 10126d len 1
+00055024459i[GDBST] addr 10126e len 1
+00055024459i[GDBST] addr 10126f len 1
+00055024459i[GDBST] addr 101270 len 1
+00055024459i[GDBST] addr 101271 len 1
+00055024459i[GDBST] addr 10121a len 1
+00055024459i[GDBST] addr 10121b len 1
+00055024459i[GDBST] addr 10121c len 1
+00055024459i[GDBST] addr 10121d len 1
+00055024459i[GDBST] addr 10121e len 1
+00055024459i[GDBST] addr 10121f len 1
+00055024459i[GDBST] addr 101220 len 1
+00055024459i[GDBST] addr 101221 len 1
+00055024459i[GDBST] addr 101222 len 1
+00055024459i[GDBST] addr 101223 len 1
+00055024459i[GDBST] addr 101224 len 1
+00055024459i[GDBST] addr 101225 len 1
+00055024459i[GDBST] addr 101226 len 1
+00055024459i[GDBST] addr 101227 len 1
+00055024459i[GDBST] addr 101228 len 1
+00055024459i[GDBST] addr 101229 len 1
+00055024459i[GDBST] addr 10122a len 1
+00055024459i[GDBST] addr 10122b len 1
+00055024459i[GDBST] addr 10122c len 1
+00055024459i[GDBST] addr 10122d len 1
+00055024459i[GDBST] addr 10122e len 1
+00055024459i[GDBST] addr 10122f len 1
+00055024459i[GDBST] addr 101230 len 4
+00055024459i[GDBST] addr 101234 len 1
+00055024459i[GDBST] addr 101235 len 1
+00055024459i[GDBST] addr 101236 len 1
+00055024459i[GDBST] addr 101237 len 1
+00055024459i[GDBST] addr 101238 len 1
+00055024459i[GDBST] addr 101239 len 1
+00055024459i[GDBST] addr 10123a len 1
+00055024459i[GDBST] addr 10123b len 1
+00055024459i[GDBST] addr 10123c len 1
+00055024459i[GDBST] addr 10123d len 1
+00055024459i[GDBST] addr 10123e len 4
+00055024459i[GDBST] addr 101242 len 1
+00055024459i[GDBST] addr 101243 len 4
+00055024459i[GDBST] addr 101247 len 1
+00055024459i[GDBST] addr 101248 len 4
+00055024459i[GDBST] addr 1011ce len 1
+00055024459i[GDBST] addr 1011cf len 1
+00055024459i[GDBST] addr 1011d0 len 1
+00055024459i[GDBST] addr 1011d1 len 1
+00055024459i[GDBST] addr 1011d2 len 1
+00055024459i[GDBST] addr 1011d3 len 1
+00055024459i[GDBST] addr 1011d4 len 1
+00055024459i[GDBST] addr 1011d5 len 1
+00055024459i[GDBST] addr 1011d6 len 1
+00055024459i[GDBST] addr 1011d7 len 1
+00055024459i[GDBST] addr 1011d8 len 1
+00055024459i[GDBST] addr 1011d9 len 1
+00055024459i[GDBST] addr 1011da len 1
+00055024459i[GDBST] addr 1011db len 1
+00055024459i[GDBST] addr 1011dc len 1
+00055024459i[GDBST] addr 1011dd len 4
+00055024459i[GDBST] addr 1011e1 len 1
+00055024459i[GDBST] addr 1011e2 len 1
+00055024459i[GDBST] addr 1011e3 len 1
+00055024459i[GDBST] addr 1011e4 len 1
+00055024459i[GDBST] addr 1011e5 len 1
+00055024459i[GDBST] addr 1011e6 len 1
+00055024459i[GDBST] addr 1011e7 len 1
+00055024459i[GDBST] addr 1011e8 len 1
+00055024459i[GDBST] addr 1011e9 len 1
+00055024459i[GDBST] addr 1011ea len 1
+00055024459i[GDBST] addr 1011eb len 1
+00055024459i[GDBST] addr 1011ec len 1
+00055024459i[GDBST] addr 1011ed len 1
+00055024459i[GDBST] addr 1011ee len 4
+00055024459i[GDBST] addr 1011f2 len 1
+00055024459i[GDBST] addr 1011f3 len 1
+00055024459i[GDBST] addr 1011f4 len 1
+00055024459i[GDBST] addr 1011f5 len 1
+00055024459i[GDBST] addr 1011f6 len 1
+00055024459i[GDBST] addr 1011f7 len 1
+00055024459i[GDBST] addr 1011f8 len 1
+00055024459i[GDBST] addr 1011f9 len 1
+00055024459i[GDBST] addr 1011fa len 1
+00055024459i[GDBST] addr 1011fb len 1
+00055024459i[GDBST] addr 1011fc len 1
+00055024459i[GDBST] addr 1011fd len 1
+00055024459i[GDBST] addr 1011fe len 1
+00055024459i[GDBST] addr 1011ff len 1
+00055024459i[GDBST] addr 101200 len 1
+00055024459i[GDBST] addr 101201 len 1
+00055024459i[GDBST] addr 1011ff len 1
+00055024459i[GDBST] addr 101200 len 1
+00055024459i[GDBST] addr 101201 len 1
+00055024459i[GDBST] addr 101202 len 1
+00055024459i[GDBST] addr 101203 len 1
+00055024459i[GDBST] addr 101204 len 1
+00055024459i[GDBST] addr 101205 len 1
+00055024459i[GDBST] addr 101206 len 1
+00055024459i[GDBST] addr 101207 len 4
+00055024459i[GDBST] addr 10120b len 1
+00055024459i[GDBST] addr 10120c len 1
+00055024459i[GDBST] addr 10120d len 1
+00055024459i[GDBST] addr 10120e len 1
+00055024459i[GDBST] addr 10120f len 1
+00055024459i[GDBST] addr 101210 len 4
+00055024459i[GDBST] addr 101214 len 1
+00055024459i[GDBST] addr 101215 len 1
+00055024459i[GDBST] addr 101216 len 1
+00055024459i[GDBST] addr 101217 len 1
+00055024459i[GDBST] addr 101218 len 1
+00055024459i[GDBST] addr 101219 len 1
+00055024459i[GDBST] addr 10121a len 1
+00055024459i[GDBST] addr 10121b len 1
+00055024459i[GDBST] addr 10121c len 1
+00055024459i[GDBST] addr 10121d len 1
+00055024459i[GDBST] addr 10121e len 1
+00055024459i[GDBST] addr 10121f len 1
+00055024459i[GDBST] addr 101220 len 1
+00055024459i[GDBST] addr 101221 len 1
+00055024459i[GDBST] addr 101222 len 1
+00055024459i[GDBST] addr 101223 len 1
+00055024459i[GDBST] addr 101224 len 1
+00055024459i[GDBST] addr 101225 len 1
+00055024459i[GDBST] addr 101226 len 1
+00055024459i[GDBST] addr 101227 len 1
+00055024459i[GDBST] addr 101228 len 1
+00055024459i[GDBST] addr 101229 len 1
+00055024459i[GDBST] addr 10122a len 1
+00055024459i[GDBST] addr 10122b len 1
+00055024459i[GDBST] addr 10122c len 1
+00055024459i[GDBST] addr 10122d len 1
+00055024459i[GDBST] addr 10122e len 1
+00055024459i[GDBST] addr 10122f len 1
+00055024459i[GDBST] addr 101230 len 4
+00055024459i[GDBST] addr 101234 len 1
+00055024459i[GDBST] addr 101235 len 1
+00055024459i[GDBST] addr 101236 len 1
+00055024459i[GDBST] addr 101237 len 1
+00055024459i[GDBST] addr 101238 len 1
+00055024459i[GDBST] addr 101239 len 1
+00055024459i[GDBST] addr 10123a len 1
+00055024459i[GDBST] addr 10123b len 1
+00055024459i[GDBST] addr 10123c len 1
+00055024459i[GDBST] addr 10123d len 1
+00055024459i[GDBST] addr 10123e len 4
+00055024459i[GDBST] addr 101218 len 1
+00055024459i[GDBST] addr 101219 len 1
+00055024459i[GDBST] addr 10121a len 1
+00055024459i[GDBST] addr 10121b len 1
+00055024459i[GDBST] addr 10121c len 1
+00055024459i[GDBST] addr 10121d len 1
+00055024459i[GDBST] addr 10121e len 1
+00055024459i[GDBST] addr 10121f len 1
+00055024459i[GDBST] addr 101220 len 1
+00055024459i[GDBST] addr 101221 len 1
+00055024459i[GDBST] addr 101222 len 1
+00055024459i[GDBST] addr 101223 len 1
+00055024459i[GDBST] addr 101224 len 1
+00055024459i[GDBST] addr 101225 len 1
+00055024459i[GDBST] addr 101226 len 1
+00055024459i[GDBST] addr 101227 len 1
+00055024459i[GDBST] addr 101228 len 1
+00055024459i[GDBST] addr 101229 len 1
+00055024459i[GDBST] addr 10122a len 1
+00055024459i[GDBST] addr 10122b len 1
+00055024459i[GDBST] addr 10122c len 1
+00055024459i[GDBST] addr 10122d len 1
+00055024459i[GDBST] addr 10122e len 1
+00055024459i[GDBST] addr 10122f len 1
+00055024459i[GDBST] addr 101230 len 4
+00055024459i[GDBST] addr 101234 len 1
+00055024459i[GDBST] addr 101235 len 1
+00055024459i[GDBST] addr 101236 len 1
+00055024459i[GDBST] addr 101237 len 1
+00055024459i[GDBST] addr 101238 len 1
+00055024459i[GDBST] addr 101239 len 1
+00055024459i[GDBST] addr 10123a len 1
+00055024459i[GDBST] addr 10123b len 1
+00055024459i[GDBST] addr 10123c len 1
+00055024459i[GDBST] addr 10123d len 1
+00055024459i[GDBST] addr 10123e len 4
+00055024459i[GDBST] addr 1011ce len 1
+00055024459i[GDBST] addr 1011cf len 1
+00055024459i[GDBST] addr 1011d0 len 1
+00055024459i[GDBST] addr 1011d1 len 1
+00055024459i[GDBST] addr 1011d2 len 1
+00055024459i[GDBST] addr 1011d3 len 1
+00055024459i[GDBST] addr 1011d4 len 1
+00055024459i[GDBST] addr 1011d5 len 1
+00055024459i[GDBST] addr 1011d6 len 1
+00055024459i[GDBST] addr 1011d7 len 1
+00055024459i[GDBST] addr 1011d8 len 1
+00055024459i[GDBST] addr 1011d9 len 1
+00055024459i[GDBST] addr 1011da len 1
+00055024459i[GDBST] addr 1011db len 1
+00055024459i[GDBST] addr 1011dc len 1
+00055024459i[GDBST] addr 1011dd len 4
+00055024459i[GDBST] addr 1011e1 len 1
+00055024459i[GDBST] addr 1011e2 len 1
+00055024459i[GDBST] addr 1011e3 len 1
+00055024459i[GDBST] addr 1011e4 len 1
+00055024459i[GDBST] addr 1011e5 len 1
+00055024459i[GDBST] addr 1011e6 len 1
+00055024459i[GDBST] addr 1011e7 len 1
+00055024459i[GDBST] addr 1011e8 len 1
+00055024459i[GDBST] addr 1011e9 len 1
+00055024459i[GDBST] addr 1011ea len 1
+00055024459i[GDBST] addr 1011eb len 1
+00055024459i[GDBST] addr 1011ec len 1
+00055024459i[GDBST] addr 1011ed len 1
+00055024459i[GDBST] addr 1011ee len 4
+00055024459i[GDBST] addr 1011f2 len 1
+00055024459i[GDBST] addr 1011f3 len 1
+00055024459i[GDBST] addr 1011f4 len 1
+00055024459i[GDBST] addr 1011f5 len 1
+00055024459i[GDBST] addr 1011f6 len 1
+00055024459i[GDBST] addr 1011f7 len 1
+00055024459i[GDBST] addr 1011f8 len 1
+00055024459i[GDBST] addr 1011f9 len 1
+00055024459i[GDBST] addr 1011fa len 1
+00055024459i[GDBST] addr 1011fb len 1
+00055024459i[GDBST] addr 1011fc len 1
+00055024459i[GDBST] addr 1011fd len 1
+00055024459i[GDBST] addr 1011fe len 1
+00055024459i[GDBST] addr 1011ff len 1
+00055024459i[GDBST] addr 101200 len 1
+00055024459i[GDBST] addr 101201 len 1
+00055024459i[GDBST] addr 1011ff len 1
+00055024459i[GDBST] addr 101200 len 1
+00055024459i[GDBST] addr 101201 len 1
+00055024459i[GDBST] addr 101202 len 1
+00055024459i[GDBST] addr 101203 len 1
+00055024459i[GDBST] addr 101204 len 1
+00055024459i[GDBST] addr 101205 len 1
+00055024459i[GDBST] addr 101206 len 1
+00055024459i[GDBST] addr 101207 len 4
+00055024459i[GDBST] addr 10120b len 1
+00055024459i[GDBST] addr 10120c len 1
+00055024459i[GDBST] addr 10120d len 1
+00055024459i[GDBST] addr 10120e len 1
+00055024459i[GDBST] addr 10120f len 1
+00055024459i[GDBST] addr 101210 len 4
+00055024459i[GDBST] addr 101214 len 1
+00055024459i[GDBST] addr 101215 len 1
+00055024459i[GDBST] addr 101216 len 1
+00055024459i[GDBST] addr 101217 len 1
+00055024459i[GDBST] addr 101218 len 1
+00055024459i[GDBST] addr 1011eb len 1
+00055024459i[GDBST] addr 1011ec len 1
+00055024459i[GDBST] addr 1011ed len 1
+00055024459i[GDBST] addr 1011ee len 4
+00055024459i[GDBST] addr 1011f2 len 1
+00055024459i[GDBST] addr 1011f3 len 1
+00055024459i[GDBST] addr 1011f4 len 1
+00055024459i[GDBST] addr 1011f5 len 1
+00055024459i[GDBST] addr 1011f6 len 1
+00055024459i[GDBST] addr 1011f7 len 1
+00055024459i[GDBST] addr 1011f8 len 1
+00055024459i[GDBST] addr 1011f9 len 1
+00055024459i[GDBST] addr 1011fa len 1
+00055024459i[GDBST] addr 1011fb len 1
+00055024459i[GDBST] addr 1011fc len 1
+00055024459i[GDBST] addr 1011fd len 1
+00055024459i[GDBST] addr 1011fe len 1
+00055024459i[GDBST] addr 1011ff len 1
+00055024459i[GDBST] addr 101200 len 1
+00055024459i[GDBST] addr 101201 len 1
+00055024459i[GDBST] addr 101202 len 1
+00055024459i[GDBST] addr 101203 len 1
+00055024459i[GDBST] addr 101204 len 1
+00055024459i[GDBST] addr 101205 len 1
+00055024459i[GDBST] addr 101206 len 1
+00055024459i[GDBST] addr 101207 len 4
+00055024459i[GDBST] addr 10120b len 1
+00055024459i[GDBST] addr 10120c len 1
+00055024459i[GDBST] addr 10120d len 1
+00055024459i[GDBST] addr 10120e len 1
+00055024459i[GDBST] addr 10120f len 1
+00055024459i[GDBST] addr 101210 len 4
+00055024459i[GDBST] addr 101214 len 1
+00055024459i[GDBST] addr 101215 len 1
+00055024459i[GDBST] addr 101216 len 1
+00055024459i[GDBST] addr 101217 len 1
+00055024459i[GDBST] addr 101218 len 1
+00055024459i[GDBST] addr 101219 len 1
+00055024459i[GDBST] addr 1011eb len 1
+00055024459i[GDBST] addr 1011ec len 1
+00055024459i[GDBST] addr 1011ed len 1
+00055024459i[GDBST] addr 1011ee len 4
+00055024459i[GDBST] addr 1011f2 len 1
+00055024459i[GDBST] addr 1011f3 len 1
+00055024459i[GDBST] addr 1011f4 len 1
+00055024459i[GDBST] addr 1011f5 len 1
+00055024459i[GDBST] addr 1011f6 len 1
+00055024459i[GDBST] addr 1011f7 len 1
+00055024459i[GDBST] addr 1011f8 len 1
+00055024459i[GDBST] addr 1011f9 len 1
+00055024459i[GDBST] addr 1011fa len 1
+00055024459i[GDBST] addr 1011fb len 1
+00055024459i[GDBST] addr 1011fc len 1
+00055024459i[GDBST] addr 1011fd len 1
+00055024459i[GDBST] addr 1011fe len 1
+00055024459i[GDBST] addr 1011ff len 1
+00055024459i[GDBST] addr 101200 len 1
+00055024459i[GDBST] addr 101201 len 1
+00055024459i[GDBST] addr 101202 len 1
+00055024459i[GDBST] addr 101203 len 1
+00055024459i[GDBST] addr 101204 len 1
+00055024459i[GDBST] addr 101205 len 1
+00055024459i[GDBST] addr 101206 len 1
+00055024459i[GDBST] addr 101207 len 4
+00055024459i[GDBST] addr 10120b len 1
+00055024459i[GDBST] addr 10120c len 1
+00055024459i[GDBST] addr 10120d len 1
+00055024459i[GDBST] addr 10120e len 1
+00055024459i[GDBST] addr 10120f len 1
+00055024459i[GDBST] addr 101210 len 4
+00055024459i[GDBST] addr 101214 len 1
+00055024459i[GDBST] addr 101215 len 1
+00055024459i[GDBST] addr 101216 len 1
+00055024459i[GDBST] addr 101217 len 1
+00055024459i[GDBST] addr 101218 len 1
+00055024459i[GDBST] addr 101219 len 1
+00055024459i[GDBST] addr 101219 len 1
+00055024459i[GDBST] addr 10121a len 1
+00055024459i[GDBST] addr 10121b len 1
+00055024459i[GDBST] addr 10121c len 1
+00055024459i[GDBST] addr 10121d len 1
+00055024459i[GDBST] addr 10121e len 1
+00055024459i[GDBST] addr 10121f len 1
+00055024459i[GDBST] addr 101220 len 1
+00055024459i[GDBST] addr 101221 len 1
+00055024459i[GDBST] addr 101222 len 1
+00055024459i[GDBST] addr 101223 len 1
+00055024459i[GDBST] addr 101224 len 1
+00055024459i[GDBST] addr 101225 len 1
+00055024459i[GDBST] addr 101226 len 1
+00055024459i[GDBST] addr 101227 len 1
+00055024459i[GDBST] addr 101228 len 1
+00055024459i[GDBST] addr 101229 len 1
+00055024459i[GDBST] addr 10122a len 1
+00055024459i[GDBST] addr 10122b len 1
+00055024459i[GDBST] addr 10122c len 1
+00055024459i[GDBST] addr 10122d len 1
+00055024459i[GDBST] addr 10122e len 1
+00055024459i[GDBST] addr 10122f len 1
+00055024459i[GDBST] addr 101230 len 4
+00055024459i[GDBST] addr 101234 len 1
+00055024459i[GDBST] addr 101235 len 1
+00055024459i[GDBST] addr 101236 len 1
+00055024459i[GDBST] addr 101237 len 1
+00055024459i[GDBST] addr 101238 len 1
+00055024459i[GDBST] addr 101239 len 1
+00055024459i[GDBST] addr 10123a len 1
+00055024459i[GDBST] addr 10123b len 1
+00055024459i[GDBST] addr 10123c len 1
+00055024459i[GDBST] addr 10123d len 1
+00055024459i[GDBST] addr 10123e len 4
+00055024459i[GDBST] addr 101242 len 1
+00055024459i[GDBST] addr 101243 len 4
+00055024459i[GDBST] addr 10123d len 1
+00055024459i[GDBST] addr 10123e len 4
+00055024459i[GDBST] addr 101242 len 1
+00055024459i[GDBST] addr 101243 len 4
+00055024459i[GDBST] addr 101247 len 1
+00055024459i[GDBST] addr 101248 len 4
+00055024459i[GDBST] addr 10124c len 1
+00055024459i[GDBST] addr 10124d len 4
+00055024459i[GDBST] addr 101251 len 1
+00055024459i[GDBST] addr 101252 len 1
+00055024459i[GDBST] addr 101253 len 1
+00055024459i[GDBST] addr 101254 len 1
+00055024459i[GDBST] addr 101255 len 4
+00055024459i[GDBST] addr 101259 len 1
+00055024459i[GDBST] addr 10125a len 1
+00055024459i[GDBST] addr 10125b len 1
+00055024459i[GDBST] addr 10125c len 1
+00055024459p[GDBST] >>PANIC<< Debugger asked us to quit
+00055024459i[CPU  ] CPU is in protected mode (active)
+00055024459i[CPU  ] CS.d_b = 32 bit
+00055024459i[CPU  ] SS.d_b = 32 bit
+00055024459i[CPU  ] | EAX=2badb002  EBX=0002d000  ECX=0001edd0  EDX=00000001
+00055024459i[CPU  ] | ESP=00007ff0  EBP=00007ff8  ESI=00053ca0  EDI=00053ca1
+00055024459i[CPU  ] | IOPL=0 id vip vif ac vm rf nt of df if tf sf zf af PF cf
+00055024459i[CPU  ] | SEG selector     base    limit G D
+00055024459i[CPU  ] | SEG sltr(index|ti|rpl)     base    limit G D
+00055024459i[CPU  ] |  CS:0008( 0001| 0|  0) 00000000 000fffff 1 1
+00055024459i[CPU  ] |  DS:0010( 0002| 0|  0) 00000000 000fffff 1 1
+00055024459i[CPU  ] |  SS:0010( 0002| 0|  0) 00000000 000fffff 1 1
+00055024459i[CPU  ] |  ES:0010( 0002| 0|  0) 00000000 000fffff 1 1
+00055024459i[CPU  ] |  FS:0010( 0002| 0|  0) 00000000 000fffff 1 1
+00055024459i[CPU  ] |  GS:0010( 0002| 0|  0) 00000000 000fffff 1 1
+00055024459i[CPU  ] | EIP=0010123d (0010123d)
+00055024459i[CPU  ] | CR0=0x60000011 CR1=0 CR2=0x00000000
+00055024459i[CPU  ] | CR3=0x00000000 CR4=0x00000000
+00055024459i[CPU  ] >> call .+0xfffff0ed (0x0010032f) : E8EDF0FFFF
+00055024459i[CMOS ] Last time is 1705508326 (Wed Jan 17 08:18:46 2024)
+00055024459i[XGUI ] Exit
+00055024459i[     ] restoring default signal behavior
+00055024459i[CTRL ] quit_sim called with exit code 1

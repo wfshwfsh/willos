@@ -1,0 +1,7 @@
+#romimage: file="/usr/share/seabios/bios.bin"
+#vgaromimage: file ="/usr/share/bochs/VGABIOS-lgpl-latest"
+romimage:    file=/usr/share/bochs/BIOS-bochs-latest
+floppya: 1_44=floppy.img, status=inserted
+boot: a
+display_library: x
+log: bochsout.txt
