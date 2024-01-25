@@ -21,7 +21,6 @@ elf_t elf_from_multiboot(multiboot_t *mb)
 	
 	for(i=0;i<mb->num;i++)
 	{
-		printk("i=%d", i);
 		const char *name = (const char*)(shstrtab + sh[i].name);
 		if(strcmp(".strtab", name) == 0){
 			elf.strtab = (const char*)sh[i].addr;
@@ -31,13 +30,10 @@ elf_t elf_from_multiboot(multiboot_t *mb)
 			elf.symtab = (elf_symbol_t*)sh[i].addr;
 			elf.symtabsz = sh[i].size;
 		}
-		
-		printk(" not match\n");
 	}
 	
 	printk("elf.symtab = 0x%x\n", elf.symtab);
 	printk("elf.symtabsz = %d\n", elf.symtabsz);
-	
 	printk("elf.strtab = 0x%x\n", elf.strtab);
 	printk("elf.strtabsz = %d\n", elf.strtabsz);
 	return elf;

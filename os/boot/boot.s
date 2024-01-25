@@ -22,7 +22,7 @@ dd MBOOT_CHECKSUM
 
 [GLOBAL start]
 [GLOBAL glb_mboot_ptr]
-[extern kern_entry]
+[EXTERN kern_entry]
 start:
 	cli		;disable int
 	
@@ -31,7 +31,6 @@ start:
 	mov ebp, 0
 	and esp, 0FFFFFFF0H
 	mov [glb_mboot_ptr], ebx
-	
 	call kern_entry
 	
 stop:
@@ -39,8 +38,8 @@ stop:
 	jmp	stop
 
 ; data
-section .data
-dd STACK_TOP
+;section .data
+;dd STACK_TOP
 
 ; bss
 section .bss

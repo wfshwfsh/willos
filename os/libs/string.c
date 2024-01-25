@@ -30,8 +30,11 @@ int strcmp(const char *s1, const char *s2)
 	while( (*s1!=0) || (*s2!=0))
 	{
 		int diff = *s1 - *s2;
-		if(diff != 0)
+		if(diff != 0){
 			return diff;
+		}else{
+			s1++;s2++;
+		}
 	}
 	
 	return 0;

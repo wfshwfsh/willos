@@ -8,8 +8,11 @@ int kern_entry()
 {
 	console_clear();
 	init_debug();
+	
+	
 	console_write("Hello World Test\n");
 	panic("test");
+	
 
 #if 0
 	for(int i=0;i<100;i++)
