@@ -8,10 +8,10 @@ int kern_entry()
 {
 	console_clear();
 	init_debug();
-	
+	init_gdt();
 	
 	console_write("Hello World Test\n");
-	panic("test");
+	//panic("test");
 	
 
 #if 0
