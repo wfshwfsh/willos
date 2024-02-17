@@ -4,15 +4,24 @@
 #include "common.h"
 #include "debug.h"
 
+interrupt_handler_t isr3_handler(pt_regs *regs)
+{
+	printk_color(rc_black, rc_green, "isr3_handler\n");
+}
+
 int kern_entry()
 {
 	console_clear();
 	init_debug();
 	init_gdt();
+	init_idt();
 	
 	console_write("Hello World Test\n");
 	//panic("test");
 	
+	register_interrupt_handler(3, isr3_handler);
+	asm volatile ("int $0x3");
+	asm volatile ("int $0x4");
 
 #if 0
 	for(int i=0;i<100;i++)
