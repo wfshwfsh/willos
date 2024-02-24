@@ -68,6 +68,24 @@ void init_idt()
 	idt_set_gate(30, (uint32_t)isr30, 0x08, 0x8E);
 	idt_set_gate(31, (uint32_t)isr31, 0x08, 0x8E);
 	
+	//irq
+	idt_set_gate(32, (uint32_t)irq0,  0x08, 0x8E);
+	idt_set_gate(33, (uint32_t)irq1,  0x08, 0x8E);
+	idt_set_gate(34, (uint32_t)irq2,  0x08, 0x8E);
+	idt_set_gate(35, (uint32_t)irq3,  0x08, 0x8E);
+	idt_set_gate(36, (uint32_t)irq4,  0x08, 0x8E);
+	idt_set_gate(37, (uint32_t)irq5,  0x08, 0x8E);
+	idt_set_gate(38, (uint32_t)irq6,  0x08, 0x8E);
+	idt_set_gate(39, (uint32_t)irq7,  0x08, 0x8E);
+	idt_set_gate(40, (uint32_t)irq8,  0x08, 0x8E);
+	idt_set_gate(41, (uint32_t)irq9,  0x08, 0x8E);
+	idt_set_gate(42, (uint32_t)irq10, 0x08, 0x8E);
+	idt_set_gate(43, (uint32_t)irq11, 0x08, 0x8E);
+	idt_set_gate(44, (uint32_t)irq12, 0x08, 0x8E);
+	idt_set_gate(45, (uint32_t)irq13, 0x08, 0x8E);
+	idt_set_gate(46, (uint32_t)irq14, 0x08, 0x8E);
+	idt_set_gate(47, (uint32_t)irq15, 0x08, 0x8E);
+	
 	// 255 将来用于实现系统调用
 	idt_set_gate(255, (uint32_t)isr255, 0x08, 0x8E);
 	
@@ -82,6 +100,16 @@ void isr_handler(pt_regs *regs)
 		interrupt_handler[regs->int_no](regs);
 	}else{
 		printk_color(rc_black, rc_blue, "Unhandled interrupt: %d\n", regs->int_no);
+	}
+}
+
+void irq_handler(pt_regs *regs)
+{
+	//clear interrupt - send EOI
+	int8295a_send_eoi(regs->int_no);
+	
+	if(interrupt_handler[regs->int_no]){
+		interrupt_handler[regs->int_no](regs);
 	}
 }
 
